@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="50%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#fbbf24"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Fundo escuro com borda arredondada -->
+  <rect width="512" height="512" rx="120" fill="#0a0a0a"/>
+  <rect width="512" height="512" rx="120" fill="none" stroke="#222222" stroke-width="8"/>
+
+  <!-- Linha decorativa superior (acento vermelho) -->
+  <rect x="0" y="0" width="512" height="14" rx="7" fill="url(#accentGrad)"/>
+
+  <!-- Letra M estilizada (Minifier) com corte de minificação -->
+  <path d="M 150 340 L 150 172 L 220 242 L 290 172 L 290 340 L 362 340 L 362 172 L 432 340" 
+        fill="none" stroke="url(#accentGrad)" stroke-width="34" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Linha de corte (minify) -->
+  <path d="M 170 206 L 410 206" fill="none" stroke="#1a1a1a" stroke-width="10" stroke-linecap="round"/>
+  <path d="M 170 206 L 410 206" fill="none" stroke="url(#accentGrad)" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- Ponto de destaque -->
+  <circle cx="220" cy="300" r="22" fill="url(#accentGrad)" filter="url(#glow)"/>
+</svg>
