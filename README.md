@@ -40,7 +40,7 @@ Based on the repository structure, the project contains the following main files
 4. Download the optimized file (e.g., `exemplo.min.js`).
 
 #### Public Web Page
-Access the webpage: https://jluckmay.github.io/smart-minifier/ 
+Access the webpage: https://jluckmay.github.io/simple-minifier/ 
 
 ### 🛠️ Technologies Used
 
