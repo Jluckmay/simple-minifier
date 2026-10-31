@@ -1,4 +1,4 @@
-# ⚡ Smart Minifier / Minificador Inteligente
+# ⚡ Simple Minifier / Minificador Simples
 
 🌍 Choose your language / Escolha seu idioma:
 * [🇺🇸 English](#-english)
@@ -8,7 +8,7 @@
 
 ## 🇺🇸 English
 
-A modern, minimalist, and accessible web tool for minifying code directly in the browser. Smart Minifier processes files locally using Web Workers, ensuring high speed and privacy (your files are never uploaded to a server).
+A modern, minimalist, and accessible web tool for minifying code directly in the browser. Simple Minifier processes files locally using Web Workers, ensuring high speed and privacy (your files are never uploaded to a server).
 
 ### ✨ Features
 
@@ -53,7 +53,7 @@ Access the webpage: https://jluckmay.github.io/smart-minifier/
 
 ## 🇧🇷 Português (Brasil)
 
-Uma ferramenta web moderna, minimalista e acessível para minificação de código direto no navegador. O Smart Minifier processa arquivos localmente utilizando Web Workers, garantindo alta velocidade e segurança (seus arquivos nunca são enviados para um servidor).
+Uma ferramenta web moderna, minimalista e acessível para minificação de código direto no navegador. O Simple Minifier processa arquivos localmente utilizando Web Workers, garantindo alta velocidade e segurança (seus arquivos nunca são enviados para um servidor).
 
 ### ✨ Funcionalidades
 
@@ -85,7 +85,7 @@ Conforme estruturado no repositório, o projeto contém os seguintes arquivos pr
 4. Faça o download do arquivo otimizado (ex: `exemplo.min.js`).
 
 #### Página Publica
-Acesse a seguinte página: https://jluckmay.github.io/smart-minifier/
+Acesse a seguinte página: https://jluckmay.github.io/simple-minifier/
 
 ### 🛠️ Tecnologias Utilizadas
 
