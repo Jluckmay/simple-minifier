@@ -1,6 +1,17 @@
 import argparse
 import os
 
+# Cores ANSI para interface de linha de comando moderna
+RED = "\033[38;5;196m"
+GREEN = "\033[38;5;46m"
+GOLD = "\033[38;5;220m"
+WHITE = "\033[38;5;255m"
+GRAY = "\033[38;5;245m"
+DIM = "\033[2m"
+RESET = "\033[0m"
+BOLD = "\033[1m"
+
+
 def minify_js(source: str) -> str:
     """Minify JavaScript code by removing comments and unnecessary whitespace."""
     out = []
@@ -90,13 +101,15 @@ def minify_js(source: str) -> str:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Minify a JavaScript file.")
-    parser.add_argument("source", help="Path to the input JavaScript file.")
-    parser.add_argument("-o", "--output", help="Path to the minified output file.")
+    parser = argparse.ArgumentParser(
+        description=f"{BOLD}{GOLD}Smart Minifier{RESET} {DIM}- Minificador de código JavaScript{RESET}"
+    )
+    parser.add_argument("source", help="Caminho do arquivo JavaScript de entrada.")
+    parser.add_argument("-o", "--output", help="Caminho do arquivo de saída minificado.")
     args = parser.parse_args()
 
     if not os.path.isfile(args.source):
-        raise FileNotFoundError(f"Source file not found: {args.source}")
+        raise FileNotFoundError(f"{RED}Arquivo não encontrado:{RESET} {args.source}")
 
     with open(args.source, "r", encoding="utf-8") as infile:
         source_code = infile.read()
@@ -107,7 +120,19 @@ def main() -> None:
     with open(output_path, "w", encoding="utf-8") as outfile:
         outfile.write(minified)
 
-    print(f"Minified {args.source} -> {output_path}")
+    orig_size = len(source_code)
+    min_size = len(minified)
+    saved = orig_size - min_size
+    pct = (saved / orig_size * 100) if orig_size else 0
+
+    print()
+    print(f"{BOLD}{WHITE}>> Minificacao concluida{RESET}")
+    print(f"{BOLD}{WHITE}  >{RESET} {GRAY}Entrada:{RESET}      {args.source}")
+    print(f"{BOLD}{WHITE}  >{RESET} {GRAY}Saida:{RESET}        {output_path}")
+    print(f"{BOLD}{WHITE}  >{RESET} {GRAY}Tamanho original:{RESET} {orig_size:,} bytes")
+    print(f"{BOLD}{WHITE}  >{RESET} {GRAY}Tamanho minificado:{RESET} {min_size:,} bytes")
+    print(f"{BOLD}{WHITE}  >{RESET} {GRAY}Economia:{RESET} {GREEN}{saved:,} bytes ({pct:.1f}%){RESET}")
+    print()
 
 
 if __name__ == "__main__":
